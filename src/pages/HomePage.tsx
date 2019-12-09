@@ -59,8 +59,8 @@ const HomePage: React.SFC<any> = props => {
         <NameTag>Vishnu Vardhan Dhanabalan</NameTag>
         <br />
         <ShortIntro>
-          Hi there, I'm Vishnu. I like coding 💻, visual arts 📷 and football
-          ⚽, not necessarily in that order.
+          Hi there, I'm Vishnu Dhanabalan. I like coding 💻, visual arts 📷 and
+          football ⚽, not necessarily in that order.
         </ShortIntro>
       </BioData>
     </MainContainer>
