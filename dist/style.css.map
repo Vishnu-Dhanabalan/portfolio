@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./styles/fonts/fonts.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","file":"style.css","sourcesContent":["@font-face {\n  font-family: \"ReemKufiRegular\";\n  src: url(1cbfee67b7f1e63e1334e8800d5450b6.ttf);\n}\n"],"sourceRoot":""}
