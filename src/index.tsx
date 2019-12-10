@@ -11,8 +11,8 @@ ReactDOM.render(<App />, document.getElementById("app"));
 declare let module: { hot: any };
 
 if (module.hot) {
-  module.hot.accept("./components/App", () => {
-    const NewApp = require("./components/App").default;
+  module.hot.accept("./App", () => {
+    const NewApp = require("./App").default;
 
     ReactDOM.render(<NewApp />, document.getElementById("app"));
   });
