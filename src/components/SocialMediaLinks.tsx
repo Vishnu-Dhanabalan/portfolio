@@ -11,12 +11,12 @@ const MainContainer = styled.div`
   margin: 0 auto;
   padding: 20px 0;
   & svg {
-    height: 50px;
-    width: 50px;
-    fill: ${colors.silverFox};
+    height: 45px;
+    width: 45px;
+    fill: ${colors.deepMatteGrey};
 
     &:hover {
-      fill: ${colors.areYaYellow};
+      fill: ${colors.sandTan};
     }
   }
 
@@ -25,11 +25,11 @@ const MainContainer = styled.div`
     & svg {
       height: 20px;
       width: 20px;
-      fill: ${colors.silverFox};
+      fill: ${colors.deepMatteGrey};
 
       // transistion: 3s;
       &:hover {
-        fill: ${colors.areYaYellow};
+        fill: ${colors.sandTan};
       }
     }
   }
