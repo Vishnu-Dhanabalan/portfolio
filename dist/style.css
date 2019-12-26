@@ -3,5 +3,19 @@
   src: url(1cbfee67b7f1e63e1334e8800d5450b6.ttf);
 }
 
+@font-face {
+  font-family: "BitterRegular";
+  src: url(0f1c22edaad1740f071ec14648d2ec63.ttf);
+}
+
+@font-face {
+  font-family: "BitterItalic";
+  src: url(3a734f480d139f517dda4edde39c74d8.ttf);
+}
+
+@font-face {
+  font-family: "BitterBold";
+  src: url(2e4c2ad8fe4d233e582d2878ef1daffb.ttf);
+}
 
 /*# sourceMappingURL=style.css.map*/
