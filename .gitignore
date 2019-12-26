@@ -7,3 +7,6 @@ build/
 
 # dev logs
 todo
+
+# Misc
+.DS_Store
