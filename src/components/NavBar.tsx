@@ -10,23 +10,24 @@ const Container = styled.ul`
 
   list-style: none;
   width: 100%;
-
+  position: fixed;
+  top: 0px;
   li:first-child {
     margin-right: auto;
   }
 `;
 
 const NavElements = styled.li`
-  font-family: ReemKufiRegular;
+  font-family: BitterBold;
   a {
     display: block;
-    color: ${colorCodes.silverFox};
+    color: ${colorCodes.deepMatteGrey};
     text-decoration: none;
     padding: 10px;
     font-size: 20px;
 
     :hover {
-      color: ${colorCodes.areYaYellow};
+      color: ${colorCodes.sandTan};
     }
   }
 `;
