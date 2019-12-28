@@ -50,6 +50,10 @@ const ShortIntro = styled.div`
   line-height: 22px;
   text-align: center;
   padding: 1rem 4em 1em 4em;
+
+  @media only screen and (min-width: 850px) {
+    padding: 1rem 10em 1em 10em;
+  }
 `;
 
 const HomePage: React.SFC<any> = (props: any) => {
