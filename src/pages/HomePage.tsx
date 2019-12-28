@@ -74,10 +74,9 @@ const HomePage: React.SFC<any> = props => {
             Hi, I'm Vishnu Vardhan, a software engineer interested in building
             scalable web apps for all platforms.
             <br />
-            <br />I am currently working in Robert Bosch India, working as a
-            full-stack senior software engineer, on a project that helps
-            streamlining the workflow from designing UI/UX designs to deployable
-            app code.
+            <br />I am currently working in Robert Bosch India, as a full-stack
+            senior software engineer, on a project that helps streamlining the
+            workflow from designing UI/UX designs to deployable app code.
             <br />
             <br />
             Prior to this, I was working at a startup and at The MathWorks Inc.,
