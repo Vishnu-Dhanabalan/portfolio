@@ -1,4 +1,6 @@
-const { resolve } = require("path");
+const {
+  resolve
+} = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const tsImportPluginFactory = require("ts-import-plugin");
@@ -30,32 +32,33 @@ module.exports = {
     publicPath: "/"
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(ts|tsx)?$/,
-        use: [
-          {
-            loader: "ts-loader",
-            options: {
-              transpileOnly: true,
-              getCustomTransformers: () => ({
-                before: [
-                  tsImportPluginFactory({
-                    libraryName: "antd",
-                    libraryDirectory: "es",
-                    style: "css"
-                  })
-                ]
-              }),
-              compilerOptions: {
-                module: "es2015"
-              }
+        use: [{
+          loader: "ts-loader",
+          options: {
+            transpileOnly: true,
+            getCustomTransformers: () => ({
+              before: [
+                tsImportPluginFactory({
+                  libraryName: "antd",
+                  libraryDirectory: "es",
+                  style: "css"
+                })
+              ]
+            }),
+            compilerOptions: {
+              module: "es2015"
             }
           }
-        ],
+        }],
         exclude: [resolve(__dirname, "node_modules")]
       },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
@@ -65,15 +68,13 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
       },
       {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8192
-            }
+        test: /\.(png|jpg|gif|jpeg)$/i,
+        use: [{
+          loader: "url-loader",
+          options: {
+            limit: 8192
           }
-        ]
+        }]
       },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
@@ -83,7 +84,10 @@ module.exports = {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=10000&mimetype=application/octet-stream"
       },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader"
+      },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=10000&mimetype=image/svg+xml"
