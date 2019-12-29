@@ -47,28 +47,28 @@ const SocialMediaLinks: React.SFC<any> = props => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon icon="FACEBOOK" />
+        <Icon iconIdentifier="FACEBOOK" />
       </LinkAnchor>
       <LinkAnchor
         href="https://www.linkedin.com/in/vishnudhanabalan/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon icon="LINKEDIN" />
+        <Icon iconIdentifier="LINKEDIN" />
       </LinkAnchor>
       <LinkAnchor
         href="https://github.com/Vishnu-Dhanabalan"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon icon="GITHUB" />
+        <Icon iconIdentifier="GITHUB" />
       </LinkAnchor>
       <LinkAnchor
         href="https://www.instagram.com/the_visuals_by_vishnuvardhan/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon icon="INSTAGRAM" />
+        <Icon iconIdentifier="INSTAGRAM" />
       </LinkAnchor>
     </MainContainer>
   );

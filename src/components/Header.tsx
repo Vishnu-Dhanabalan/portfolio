@@ -14,6 +14,7 @@ const Container = styled.div`
   width: 100%;
   font-size: 20px;
   font-family: BitterRegular;
+  background: #eaeaea;
 
   & a {
     color: ${colorCodes.deepMatteGrey};
@@ -37,8 +38,6 @@ const Header: React.SFC<HeaderProps> = (props: HeaderProps) => {
   return (
     <Container>
       {props.showHome ? <Link to="/">Home</Link> : null}
-
-      <Link to="/work">Work</Link>
       <Link to="/blog">Blog</Link>
       <Link to="/photography">Photography</Link>
     </Container>
