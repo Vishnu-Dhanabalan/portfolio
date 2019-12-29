@@ -1,28 +1,25 @@
 import * as React from "react";
 import styled from "styled-components";
-
 import colorCodes from "../styles/color-codes";
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-
-  list-style: none;
+  justify-content: center;
   width: 100%;
-  position: fixed;
-  bottom: 5px;
-
-  font-size: 12px;
+  font-size: 10px;
   font-family: BitterRegular;
   color: ${colorCodes.deepMatteGrey};
+  padding: 20px 0px 0px 0px;
+  }
 `;
 
-const Copyrights: React.SFC<any> = (props: any) => {
+const Footer: React.SFC<any> = (props: any) => {
   return (
     <Container>
-      2019 Copyrights © Vishnu Vardhan Dhanabalan. All rights reserved.
+      2019 Copyright © Vishnu Vardhan Dhanabalan. All rights reserved.
     </Container>
   );
 };
 
-export default Copyrights;
+export default Footer;

@@ -6,7 +6,8 @@ const colorCodes = {
   areYaYellow: "#feda6a",
   silverFox: "#d4d4dc",
   deepMatteGrey: "#393f4d",
-  darkSlate: "#1d1e22"
+  darkSlate: "#1d1e22",
+  midnightBlue: "#363946"
 };
 
 export default colorCodes;

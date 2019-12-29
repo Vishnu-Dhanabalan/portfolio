@@ -2,95 +2,76 @@ import * as React from "react";
 import styled from "styled-components";
 
 import colorCodes from "../styles/color-codes";
-import { device } from "../styles/breakpoints";
-import avatarImage from "../assets/my-pic.jpg";
+import assets from "../assets";
 import SocialMediaLinks from "../components/SocialMediaLinks";
-import NavBar from "../components/NavBar";
 
-const MainContainer = styled.div`
+const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #F5F5F5
-  height: 100vh;
-
-  @media ${device.mobileL} {
-   height: 100%;
-  }
-`;
-
-const MainContent = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0 10%;
-  @media ${device.mobileL} {
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 25%;
+  background-color: #f5f5f5;
+  font-size: 20px;
+  min-height: 100vh;
+  @media only screen and (max-device-width: 400px) {
+    font-size: 16px;
   }
 `;
 
 const BioData = styled.div`
-  margin: 10px 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 100%;
+
+  @media only screen and (max-device-width: 400px) {
+    margin: 2em 0em 0em 0em;
+  }
 `;
 
 const Avatar = styled.img`
   height: 300px;
+  width: 300px;
   border-radius: 50%;
   border: 3px solid ${colorCodes.nightBlue};
-  margin: 0 auto;
-  @media ${device.mobileL} {
-    height: 250px;
-    width: 250px;
+  margin: 3rem 1rem 2rem 1rem;
+
+  @media only screen and (max-device-width: 400px) {
+    height: 200px;
+    width: 200px;
   }
 `;
 
 const ShortIntro = styled.div`
   color: ${colorCodes.deepMatteGrey};
-  font-size: 20px;
   font-family: BitterRegular;
   text-align: left;
+  line-height: 22px;
+  text-align: center;
+  padding: 1rem 4em 1em 4em;
 
-  // max width 425px;
-  @media ${device.mobileL} {
-    margin: 0 2rem;
-    font-size: 15px;
+  @media only screen and (min-width: 850px) {
+    padding: 1rem 10em 1em 10em;
   }
 `;
 
-const HomePage: React.SFC<any> = props => {
+const HomePage: React.SFC<any> = (props: any) => {
   return (
-    <MainContainer>
-      <NavBar></NavBar>
-      <MainContent>
-        <Avatar src={avatarImage} alt="" />
-        <BioData>
-          <ShortIntro>
-            Hi, I'm Vishnu Vardhan, a software engineer interested in building
-            scalable web apps for all platforms.
-            <br />
-            <br />I am currently working in Robert Bosch India, as a full-stack
-            senior software engineer, on a project that helps streamlining the
-            workflow from designing UI/UX designs to deployable app code.
-            <br />
-            <br />
-            Prior to this, I was working at a startup and at The MathWorks Inc.,
-            as DSP Software Engineer.
-            <br />
-            <br />I like to solve competitive programming problems, visual arts
-            and football (not necessarily in that order though)
-          </ShortIntro>
+    <PageContainer>
+      <BioData>
+        <Avatar src={assets.avatarImage} />
+        <ShortIntro>
+          Hi, I'm Vishnu Vardhan, a software engineer interested in everything
+          about building scalable web apps.
           <br />
+          <br />I like to solve competitive programming problems, visual arts
+          and football (not always in that order though)
           <br />
-          <SocialMediaLinks></SocialMediaLinks>
-        </BioData>
-      </MainContent>
-    </MainContainer>
+          <br /> Scroll down to know more about me.
+        </ShortIntro>
+        <SocialMediaLinks></SocialMediaLinks>
+        <hr style={{ borderBottom: "0px #eaeaea solid", width: "60%" }} />
+      </BioData>
+    </PageContainer>
   );
 };
 

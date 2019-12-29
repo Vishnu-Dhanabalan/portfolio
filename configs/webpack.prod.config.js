@@ -1,4 +1,6 @@
-const { resolve } = require("path");
+const {
+  resolve
+} = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const tsImportPluginFactory = require("ts-import-plugin");
@@ -18,31 +20,32 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(ts|tsx)?$/,
-        use: [
-          {
-            loader: "ts-loader",
-            options: {
-              transpileOnly: true,
-              getCustomTransformers: () => ({
-                before: [
-                  tsImportPluginFactory({
-                    libraryName: "antd",
-                    libraryDirectory: "es",
-                    style: "css"
-                  })
-                ]
-              }),
-              compilerOptions: {
-                module: "es2015"
-              }
+        use: [{
+          loader: "ts-loader",
+          options: {
+            transpileOnly: true,
+            getCustomTransformers: () => ({
+              before: [
+                tsImportPluginFactory({
+                  libraryName: "antd",
+                  libraryDirectory: "es",
+                  style: "css"
+                })
+              ]
+            }),
+            compilerOptions: {
+              module: "es2015"
             }
           }
-        ]
+        }]
       },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
@@ -51,8 +54,15 @@ module.exports = {
         test: /\.less$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
       },
-      { test: /\.png$/, loader: "url-loader?limit=100000" },
-      { test: /\.jpg$/, loader: "file-loader" },
+      {
+        test: /\.(png|jpg|gif|jpeg)$/i,
+        use: [{
+          loader: "url-loader",
+          options: {
+            limit: 8192
+          }
+        }]
+      },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=10000&mimetype=application/font-woff"
@@ -61,7 +71,10 @@ module.exports = {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=10000&mimetype=application/octet-stream"
       },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader"
+      },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=10000&mimetype=image/svg+xml"
@@ -79,11 +92,9 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": '"production"'
     }),
-    new CopyPlugin([
-      {
-        from: resolve(__dirname, "..", "public", "title-icon.png"),
-        to: resolve(__dirname, "..", "dist")
-      }
-    ])
+    new CopyPlugin([{
+      from: resolve(__dirname, "..", "public", "title-icon.png"),
+      to: resolve(__dirname, "..", "dist")
+    }])
   ]
 };
