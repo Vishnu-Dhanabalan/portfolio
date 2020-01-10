@@ -6,6 +6,7 @@ import boschLogo from "./logos/bosch.jpeg";
 import euphonyIncLogo from "./logos/euphony_logo.png";
 import mathworksIncLogo from "./logos/mathworks_logo.jpg";
 import syracuseUnivLogo from "./logos/su.png";
+import resumePDF from "./VishnuVardhanDhanabalan_resume.pdf";
 
 export default {
   avatarImage,
@@ -13,5 +14,6 @@ export default {
   boschLogo,
   euphonyIncLogo,
   mathworksIncLogo,
-  syracuseUnivLogo
+  syracuseUnivLogo,
+  resumePDF
 };
