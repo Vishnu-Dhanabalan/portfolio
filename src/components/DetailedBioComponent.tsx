@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 1 33.33%;
-  padding: 30px 30px;
+  padding: 30px 10px;
   align-items: center;
   text-align: center;
   color: ${colorCodes.silverFox};
@@ -42,8 +42,8 @@ const Location = styled.h4`
 const Description = styled.div`
   text-align: center;
   font-size: 16px;
-  margin: 3% 20%;
-  line-height: 20px;
+  margin: 3% 10%;
+  line-height: 25px;
 `;
 
 export interface DetailedBioProps {
