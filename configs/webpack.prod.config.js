@@ -72,7 +72,7 @@ module.exports = {
         loader: "url-loader?limit=10000&mimetype=application/octet-stream"
       },
       {
-        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(eot|pdf)(\?v=\d+\.\d+\.\d+)?$/,
         loader: "file-loader"
       },
       {
