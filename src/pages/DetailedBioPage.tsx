@@ -21,6 +21,9 @@ const WORK_DATA: DetailedBioProps[] = [
         based web-app, that helps streamlining the workflow of designing UI/UX,
         configuring its prototypes and exporting it to deployable app code for
         various targets. <br />
+        <br />
+        I've taken sole ownership in developing plugins for AdobeXD and Sketch,
+        using Common JavaScript <br />
         <br /> I've been mainly involved with ReactJS, ElectronJS, NodeJS,
         TypeScript, MongoDB and MySQL. I also take care of DevOPSing our team's
         projects in Azure.
@@ -78,6 +81,35 @@ const WORK_DATA: DetailedBioProps[] = [
   }
 ];
 
+const EDUCATION_DATA: DetailedBioProps[] = [
+  {
+    logo: assets.syracuseUnivLogo,
+    topic: "Syracuse University",
+    position: "Masters in Electrical Engineering",
+    location: "Syracuse, USA",
+    description: (
+      <div>
+        Real-time DSP and related software development were my focus during my
+        time here. I've also had some interest in embedded systems.
+      </div>
+    ),
+    timeline: "Jan 2014 to Dec 2015"
+  },
+  {
+    logo: assets.annaUnivLogo,
+    topic: "Anna University",
+    position: "Bachelors in Electrical and Electronics Engineering",
+    location: "Chennai, India",
+    description: (
+      <div>
+        I studied basics of electrical and electronics engineering with few
+        courses focused on programming microprocessors and embedded systems.
+      </div>
+    ),
+    timeline: "Sep 2009 to May 2013"
+  }
+];
+
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -87,7 +119,6 @@ const PageContainer = styled.div`
     font-size: 16px;
   }
 
-  // DUMMY
   background: ${colorCodes.midnightBlue};
   color: ${colorCodes.silverFox};
 `;
@@ -104,12 +135,29 @@ const Blinker = styled.span`
   animation: 1s ${blinkingEffect} step-end infinite;
 `;
 
-const WorkContainer = styled.div`
+const TLDR = styled.div`
+  margin-top: 30px;
+  opacity: 0.5;
+
+  text-align: center;
+  font-size: 25px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  & a {
+    text-decoration: none;
+    color: ${colorCodes.silverFox};
+  }
+`;
+
+const DetailedBioContainer = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   color: ${colorCodes.deepMatteGrey};
-
+  
   @media only screen and (max-width: 850px) {
     flex-direction: column;
   }
@@ -121,12 +169,23 @@ const DetailedBioPage: React.SFC<any> = (props: any) => {
     <PageContainer>
       <SectionTitle>
         my-career:so-far vishnu$<Blinker> ▌</Blinker>
+        <TLDR>
+          <a href={assets.resumePDF} target="_blank">
+            TL;DR download resume
+          </a>
+        </TLDR>
       </SectionTitle>
-      <WorkContainer>
+      <DetailedBioContainer>
         {WORK_DATA.map((each: DetailedBioProps) => {
           return <DetailedBioComponent key={each.timeline} {...each} />;
         })}
-      </WorkContainer>
+      </DetailedBioContainer>
+      <hr style={{ border: "1px solid gray", width: "80%" }} />
+      <DetailedBioContainer>
+        {EDUCATION_DATA.map((each: DetailedBioProps) => {
+          return <DetailedBioComponent key={each.timeline} {...each} />;
+        })}
+      </DetailedBioContainer>
     </PageContainer>
   );
 };
