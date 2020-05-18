@@ -38,8 +38,11 @@ const Header: React.SFC<HeaderProps> = (props: HeaderProps) => {
   return (
     <Container>
       {props.showHome ? <Link to="/">Home</Link> : null}
-      <Link to="/blog">Blog</Link>
-      <Link to="/photography">Photography</Link>
+      {/**
+       * Will add blog and photography links once they are implemented.
+       */}
+      {/* <Link to="/blog">Blog</Link>
+      <Link to="/photography">Photography</Link> */}
     </Container>
   );
 };
