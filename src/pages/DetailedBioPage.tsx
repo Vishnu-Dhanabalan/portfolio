@@ -6,10 +6,35 @@ import { blinkingEffect } from "../styles/keyframes";
 
 import assets from "../assets";
 import DetailedBioComponent, {
-  DetailedBioProps
+  DetailedBioProps,
 } from "../components/DetailedBioComponent";
 
 const WORK_DATA: DetailedBioProps[] = [
+  {
+    logo: assets.sscLogo,
+    topic: "SecurityScorecard",
+    position: "Software Engineer",
+    location: "Toronto, Canada",
+    description: (
+      <div>
+        Working as a full-stack software engineer on{" "}
+        <a
+          href="https://securityscorecard.com/product/atlas"
+          target="_blank"
+          style={{
+            color: colorCodes.sandTan,
+            fontStyle: "italic",
+          }}
+        >
+          Atlas
+        </a>
+        . Pretty cool team with plenty of work to do. <br />
+        <br />
+        All things on Python, TypeScript and ReactJS.
+      </div>
+    ),
+    timeline: "May 2020 onwards",
+  },
   {
     logo: assets.boschLogo,
     topic: "Robert Bosch India",
@@ -17,19 +42,18 @@ const WORK_DATA: DetailedBioProps[] = [
     location: "Coimbatore, India",
     description: (
       <div>
-        I've been working as a full-stack engineer on building the microservices
-        based web-app, that helps streamlining the workflow of designing UI/UX,
+        I've worked as a full-stack engineer on building the microservices based
+        web-app, that helps streamlining the workflow of designing UI/UX,
         configuring its prototypes and exporting it to deployable app code for
         various targets. <br />
         <br />
         I've taken sole ownership in developing plugins for AdobeXD and Sketch,
         using Common JavaScript <br />
-        <br /> I've been mainly involved with ReactJS, ElectronJS, NodeJS,
-        TypeScript, MongoDB and MySQL. I also take care of DevOPSing our team's
-        projects in Azure.
+        <br /> I've used ReactJS, ElectronJS, NodeJS, TypeScript, MongoDB and
+        MySQL. I also take care of DevOPSing our team's projects in Azure.
       </div>
     ),
-    timeline: "Dec 2018 to Present"
+    timeline: "Dec 2018 to March 2020",
   },
   {
     logo: assets.euphonyIncLogo,
@@ -47,7 +71,7 @@ const WORK_DATA: DetailedBioProps[] = [
         C++, Python and MATLAB was the main artillery I had.
       </div>
     ),
-    timeline: "April 2016 to May 2018"
+    timeline: "April 2016 to May 2018",
   },
   {
     logo: assets.mathworksIncLogo,
@@ -61,7 +85,7 @@ const WORK_DATA: DetailedBioProps[] = [
           href="https://www.mathworks.com/products/audio.html"
           style={{
             color: colorCodes.sandTan,
-            fontStyle: "italic"
+            fontStyle: "italic",
           }}
           target="_blank"
         >
@@ -77,8 +101,8 @@ const WORK_DATA: DetailedBioProps[] = [
         <br />I was coding totally in MATLAB and C/C++.
       </div>
     ),
-    timeline: "May 2015 to Sep 2015"
-  }
+    timeline: "May 2015 to Sep 2015",
+  },
 ];
 
 const EDUCATION_DATA: DetailedBioProps[] = [
@@ -93,7 +117,7 @@ const EDUCATION_DATA: DetailedBioProps[] = [
         time here. I've also had some interest in embedded systems.
       </div>
     ),
-    timeline: "Jan 2014 to Dec 2015"
+    timeline: "Jan 2014 to Dec 2015",
   },
   {
     logo: assets.annaUnivLogo,
@@ -106,8 +130,8 @@ const EDUCATION_DATA: DetailedBioProps[] = [
         courses focused on programming microprocessors and embedded systems.
       </div>
     ),
-    timeline: "Sep 2009 to May 2013"
-  }
+    timeline: "Sep 2009 to May 2013",
+  },
 ];
 
 const PageContainer = styled.div`
